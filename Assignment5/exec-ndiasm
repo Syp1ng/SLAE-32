@@ -1,0 +1,25 @@
+00000000  6A0B              push byte +0xb
+00000002  58                pop eax
+00000003  99                cdq
+00000004  52                push edx
+00000005  66682D63          push word 0x632d
+00000009  89E7              mov edi,esp
+0000000B  682F736800        push dword 0x68732f
+00000010  682F62696E        push dword 0x6e69622f
+00000015  89E3              mov ebx,esp
+00000017  52                push edx
+00000018  E815000000        call 0x32
+0000001D  746F              jz 0x8e
+0000001F  7563              jnz 0x84
+00000021  682048656C        push dword 0x6c654820
+00000026  6C                insb
+00000027  6F                outsd
+00000028  57                push edi
+00000029  6F                outsd
+0000002A  726C              jc 0x98
+0000002C  642E7478          cs jz 0xa8
+00000030  7400              jz 0x32
+00000032  57                push edi
+00000033  53                push ebx
+00000034  89E1              mov ecx,esp
+00000036  CD80              int 0x80

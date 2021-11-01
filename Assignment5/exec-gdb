@@ -1,0 +1,25 @@
+0x0804c040 <+0>:	push   0xb
+0x0804c042 <+2>:	pop    eax
+0x0804c043 <+3>:	cdq    
+0x0804c044 <+4>:	push   edx
+0x0804c045 <+5>:	pushw  0x632d
+0x0804c049 <+9>:	mov    edi,esp
+0x0804c04b <+11>:	push   0x68732f
+0x0804c050 <+16>:	push   0x6e69622f
+0x0804c055 <+21>:	mov    ebx,esp
+0x0804c057 <+23>:	push   edx
+0x0804c058 <+24>:	call   0x804c072 <code+50>
+0x0804c05d <+29>:	je     0x804c0ce
+0x0804c05f <+31>:	jne    0x804c0c4
+0x0804c061 <+33>:	push   0x6c654820
+0x0804c066 <+38>:	ins    BYTE PTR es:[edi],dx
+0x0804c067 <+39>:	outs   dx,DWORD PTR ds:[esi]
+0x0804c068 <+40>:	push   edi
+0x0804c069 <+41>:	outs   dx,DWORD PTR ds:[esi]
+0x0804c06a <+42>:	jb     0x804c0d8
+0x0804c06c <+44>:	fs cs je 0x804c0e8
+0x0804c070 <+48>:	je     0x804c072 <code+50>
+0x0804c072 <+50>:	push   edi
+0x0804c073 <+51>:	push   ebx
+0x0804c074 <+52>:	mov    ecx,esp
+0x0804c076 <+54>:	int    0x80
