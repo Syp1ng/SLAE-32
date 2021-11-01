@@ -57,7 +57,7 @@ xor ebx, ebx
 int 0x80
 ```
 Because we need 0x1 in eax instead of a move instruction with 2 bytes we could use an inc eax which will only take 1 byte. Also we can change xor ebx, ebx to a mov instruction to change the instructions a little bit.
-```
+``` assembly
 xor eax, eax
 mov ebx, eax
 inc eax
