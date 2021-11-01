@@ -29,4 +29,4 @@ ____
 
 ___
 
-I used an old kali linux with linux kernal 5.4 to test my shellcodes from this course because I faced some problems with the execution of shellcodes and found out that versions greater than linux kernal 5.4 there were some changes in the execution of shellcode in the memory ([reference](https://medium.com/csg-govtech/why-doesnt-my-shellcode-work-anymore-136ce179643f)).
+I used an old kali linux with linux kernal 5.4 to test my shellcodes from this course because I faced some problems with the execution of shellcodes and found out that on versions greater than linux kernal 5.4 there were some changes in the execution of shellcode in the memory ([reference](https://medium.com/csg-govtech/why-doesnt-my-shellcode-work-anymore-136ce179643f)).
